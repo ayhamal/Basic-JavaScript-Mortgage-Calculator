@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>assign07</title>
+
+      <!-- Tailwind css framework -->
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+      <!-- Custom assign07 css -->
+      <link rel="stylesheet" href="assign07.css">
+  </head>
+
+  <body>
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Assign 07</h2>
+          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              JavaScript mortgage calculator
+          </p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+          </p>
+        </div>
+
+        <!-- Init form -->
+        <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">APR</label>
+              <!-- Give this field the name and id apr. -->
+              <input
+                id="apr"
+                name="apr"
+                type="text"
+                placeholder="Annual Percentage Rate"
+                class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"/>
+              <span id="aprErrorMessage" class="px-3 text-red-500 hidden">Error: Invalid Percentage</span>
+            </div>
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Loan Term</label>
+              <!-- Give this field the name and id term. -->
+              <input
+                id="term"
+                name="term"
+                type="text"
+                placeholder="Number of years"
+                class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+              <span id="termErrorMessage" class="px-3 text-red-500 hidden">Error: Invalid Number of years</span>
+            </div>
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Loan Amount</label>
+              <!-- Give this field the name and id amount -->
+              <input
+                id="amount"
+                name="amount"
+                type="text"
+                placeholder="Amount in USD"
+                class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+                <span id="amountErrorMessage" class="px-3 text-red-500 hidden">Error: Invalid Amount</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 mt-5 mx-7">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Monthly Payment</label>
+            <!-- Give this field the id payment. -->
+            <input
+              id="payment"
+              name="payment"
+              type="text"
+              placeholder="Estimated Monthly Payment"
+              class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              disabled>
+          </div>
+
+          <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
+            <!-- Give this button the id clear. -->
+            <button
+              id="clear"
+              class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>
+              Reset
+            </button>
+            <!-- Give this field the id calculate. -->
+            <button
+              id="calculate"
+              class='w-auto bg-blue-500 hover:bg-blue-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>
+              Calcultate
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Custom assign07 JS -->
+    <script src="assign07.js"></script>
+  </body>
+</html>
